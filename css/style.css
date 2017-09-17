@@ -37,11 +37,16 @@ h3 {
     font-weight: lighter;
 }
 
+h4 {
+    font-weight: lighter;
+}
+
 .social-links {
     font-size: 40px;
     margin-top: 50px;
 }
 
-.social-links a {
+.profile-box a {
     color: white;
+    text-decoration: none;
 }
