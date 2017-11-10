@@ -1,4 +1,4 @@
-html {
+body {
     background-image: url("../images/background.jpg");
 
     height: 100%;
@@ -39,6 +39,12 @@ h3 {
 
 h4 {
     font-weight: lighter;
+}
+
+p {
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
 
 .social-links {
