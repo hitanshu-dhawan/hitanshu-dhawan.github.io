@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #212121;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-inverse {
+  background-color: #111111;
+  border-color: #080808;
+}
+
+.centre {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+#profile-box {
+    color: white;
+    margin-top: 100px;
+}
+
+#profile-box h1 {
+    font-size: 70px;
+}
+
+#profile-box p {
+    font-size: 30px;
+}
+
+#profile-pic {
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+    border-color: white;
+    border-width: medium;
+    border-radius: 5%;
+}
+
+p span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.fa {
+    font-size: 35px;
+    height: 50px;
+    width: 50px;
+    color: #FFFFFF;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/*.fa-facebook {
+    color: #FFFFFF;
+}
+
+.fa-linkedin {
+  color: #FFFFFF;
+}
+
+.fa-github {
+  color: #FFFFFF;
+}
+
+.fa-quora {
+    color: #FFFFFF;
+}
+
+.fa-envelope-o {
+    color: #FFFFFF;
+}*/
