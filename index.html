@@ -4,11 +4,13 @@
         <title>Hitanshu Dhawan</title>
         <link rel="icon" type="img/ico" href="images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,800">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/master.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-        <script src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/typed.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     </head>
     <body>
 
@@ -22,13 +24,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Hitanshu Dhawan</a>
+                    <a class="navbar-brand" href="index.html"><strong>Hitanshu Dhawan</strong></a>
                 </div>
 
-                <div id="collapseNavbar" class="collapse navbar-collapse">
+                <div id="collapseNavbar" class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li><a href="#">Projects</a></li>
-                        <li><a href="files/HitanshuDhawanResume.pdf">Résumé</a></li>
+                        <li><a href="files/HitanshuDhawanResume.pdf" target="_blank">Résumé</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">About Me</a></li>
                     </ul>
@@ -58,9 +60,42 @@
             <a href="mailto:hitanshudhawan1996@gmail.com" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
         </div>
 
-        <br><br><br><br>
+        <br><br><br><br><br><br>
 
-        <!--  -->
+        <div id="technologies">
+            <div id="scene">
+                <div id="js-image" data-depth="1.2"><img src="images/js.png" width="150px"></div>
+                <div id="css-image" data-depth="1.0"><img src="images/css.png" width="150px"></div>
+                <div id="html-image" data-depth="0.8"><img src="images/html.png" width="200px"></div>
+                <div id="python-image" data-depth="-0.2"><img src="images/python.png" width="200px"></div>
+                <div id="android-image" data-depth="0.5"><img src="images/android.png"></div>
+            </div>
+            <script type="text/javascript">
+                var scene = document.querySelector("#scene");
+                var parallaxInstance = new Parallax(scene,{
+                    hoverOnly: true,
+                    originX: 0,
+                    limitY: 0
+                });
+            </script>
+        </div>
+
+
+
+
+
+        <!-- <span id="typed"></span>
+        <script>
+            var typed = new Typed('#typed', {
+                strings: ["I'm an Android Developer","I'm a Web Developer"],
+                typeSpeed: 100,
+                backSpeed: 100,
+                backDelay: 1000,
+                smartBackspace: true,
+                loop: true
+            });
+        </script> -->
+
 
     </body>
 </html>

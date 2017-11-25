@@ -44,18 +44,57 @@ body {
     border-radius: 5%;
 }
 
-p span {
+#profile-box p span {
     font-size: 1.5em;
     font-weight: bold;
 }
 
-.fa {
+#profile-box .fa {
     font-size: 35px;
     height: 50px;
     width: 50px;
     color: #FFFFFF;
 }
 
-.fa:hover {
+#profile-box .fa:hover {
     opacity: 0.7;
+}
+
+#technologies {
+    background-color: #232323;
+    height: 300px;
+}
+
+#scene {
+    height: 300px;
+}
+
+#html-image {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 700px;
+}
+
+#css-image {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 800px;
+}
+
+#js-image {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 900px;
+}
+
+#android-image {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 1000px;
+}
+
+#python-image {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 1100px;
 }
