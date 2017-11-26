@@ -61,7 +61,12 @@ body {
 }
 
 #technologies {
-    background-color: #212121;
+    /*background-color: #212121;*/
+    background-image: url("../images/world01.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     height: 410px;
     position: relative;
 }
@@ -71,13 +76,12 @@ body {
     font-size: 50px;
     font-weight: bold;
     position: absolute;
-    margin-top: 150px;
+    margin-top: 170px;
     margin-left: 50px;
 }
 
 #scene {
-    height: 400px;
-    margin-top: 35px;
+    height: 350px;
 }
 
 #html-image {

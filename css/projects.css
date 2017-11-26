@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/background.jpg");
+    background-color: #212121;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-inverse {
+    background-color: #111111;
+    border-color: #080808;
+}
+
+.centre {
+    text-align: center;
+}
