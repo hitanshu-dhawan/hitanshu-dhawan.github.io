@@ -7,8 +7,8 @@ body {
 }
 
 .navbar-inverse {
-  background-color: #111111;
-  border-color: #080808;
+    background-color: #111111;
+    border-color: #080808;
 }
 
 .centre {
@@ -61,40 +61,46 @@ body {
 }
 
 #technologies {
-    background-color: #232323;
-    height: 300px;
+    background-color: #212121;
+    height: 410px;
+    position: relative;
+}
+
+#typed {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 50px;
 }
 
 #scene {
-    height: 300px;
+    height: 400px;
+    margin-top: 35px;
 }
 
 #html-image {
-    position: absolute;
     margin-top: 100px;
-    margin-left: 700px;
+    margin-left: 50%;
 }
 
 #css-image {
-    position: absolute;
     margin-top: 50px;
-    margin-left: 800px;
+    margin-left: 58%;
 }
 
 #js-image {
-    position: absolute;
     margin-top: 0px;
-    margin-left: 900px;
+    margin-left: 67%;
 }
 
 #android-image {
-    position: absolute;
     margin-top: 50px;
-    margin-left: 1000px;
+    margin-left: 75%;
 }
 
 #python-image {
-    position: absolute;
     margin-top: 0px;
-    margin-left: 1100px;
+    margin-left: 82%;
 }
