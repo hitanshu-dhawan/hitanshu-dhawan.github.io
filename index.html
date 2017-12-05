@@ -2,15 +2,16 @@
 <html>
     <head>
         <title>Hitanshu Dhawan</title>
-        <link rel="icon" type="img/ico" href="images/favicon.ico">
+        <link rel="icon" type="img/ico" href="/images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,800">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="/css/index.css">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+        <script type="text/javascript" src="/js/index.js"></script>
     </head>
     <body>
 
@@ -30,19 +31,18 @@
                         <li><a href="projects.html">Projects</a></li>
                         <li><a href="files/HitanshuDhawanResume.pdf" target="_blank">Résumé</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#">About Me</a></li>
+                        <li><a id="nav-about-me" href="#about-me">About Me</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <br>
-
         <div id="index-particles"></div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
         <script src="js/index_particles.js"></script>
+
         <div id="profile-box" class="centre">
-            <img id="profile-pic" src="images/profile_pic.jpg">
+            <img id="profile-pic" src="/images/profile_pic.jpg">
             <h1>Hitanshu Dhawan</h1>
             <div class="typewriter">
                 <p>judge me by my <span>works</span>, not by my <span>words</span></p>
@@ -56,8 +56,6 @@
             <a href="https://www.quora.com/profile/Hitanshu-Dhawan-1" target="_blank"><i class="fa fa-quora" aria-hidden="true"></i></a>
             <a href="mailto:hitanshudhawan1996@gmail.com" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
         </div>
-
-        <br><br><br><br><br><br>
 
         <div id="technologies">
             <span id="typed"></span>
@@ -74,11 +72,11 @@
             </script>
             <br><br><br>
             <div id="scene">
-                <div id="js-image" data-depth="1.2"><img src="images/js.png" width="150px"></div>
-                <div id="css-image" data-depth="1.0"><img src="images/css.png" width="150px"></div>
-                <div id="html-image" data-depth="0.8"><img src="images/html.png" width="200px"></div>
-                <div id="python-image" data-depth="-0.2"><img src="images/python.png" width="200px"></div>
-                <div id="android-image" data-depth="0.5"><img src="images/android.png"></div>
+                <div id="js-image" data-depth="1.2"><img src="/images/js.png" width="150px"></div>
+                <div id="css-image" data-depth="1.0"><img src="/images/css.png" width="150px"></div>
+                <div id="html-image" data-depth="0.8"><img src="/images/html.png" width="200px"></div>
+                <div id="python-image" data-depth="-0.2"><img src="/images/python.png" width="200px"></div>
+                <div id="android-image" data-depth="0.5"><img src="/images/android.png"></div>
             </div>
             <script type="text/javascript">
                 var scene = document.querySelector("#scene");
@@ -90,9 +88,37 @@
             </script>
         </div>
 
-        <!--  -->
+        <div id="projects">
+            <img id="github-logo" src="/images/octocat.png">
+            <div id="projects-text">
+                <h1>I like to make stuff with my code.</h1>
+                <h3>check out my <span><a href="projects.html">projects</a></span>...</h3>
+            </div>
+        </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="about-me" class="container">
+            <h1 class="centre">About Me</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <ul>
+                <li>a</li>
+                <li>b</li>
+                <li>c</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div id="footer">
+            <div class="container centre">
+                <a href="https://www.facebook.com/dhawan.hitanshu" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/hitanshu.dhawan/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/hitanshu-dhawan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://github.com/hitanshu-dhawan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://play.google.com/store/apps/developer?id=Hitanshu+Dhawan" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+                <a href="https://www.quora.com/profile/Hitanshu-Dhawan-1" target="_blank"><i class="fa fa-quora" aria-hidden="true"></i></a>
+                <a href="mailto:hitanshudhawan1996@gmail.com" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+            </div>
+        </div>
 
     </body>
 </html>
