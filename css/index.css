@@ -27,14 +27,6 @@ body {
     margin-top: 100px;
 }
 
-#profile-box h1 {
-    font-size: 70px;
-}
-
-#profile-box p {
-    font-size: 30px;
-}
-
 #profile-pic {
     height: 200px;
     width: 200px;
@@ -42,6 +34,14 @@ body {
     border-color: white;
     border-width: medium;
     border-radius: 5%;
+}
+
+#profile-box h1 {
+    font-size: 70px;
+}
+
+#profile-box p {
+    font-size: 30px;
 }
 
 #profile-box p span {
@@ -61,8 +61,8 @@ body {
 }
 
 #technologies {
-    /*background-color: #212121;*/
-    background-image: url("../images/world01.jpg");
+    background-image: url("../images/coding_background.jpg");
+    background-color: #212121;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
