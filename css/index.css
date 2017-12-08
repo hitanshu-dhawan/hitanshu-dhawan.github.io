@@ -126,6 +126,7 @@ body {
     position: absolute;
     margin-top: 100px;
     margin-left: 400px;
+    margin-right: 50px;
 }
 
 #projects-text h3 span{
@@ -174,24 +175,13 @@ body {
     }
 
     #technologies {
-        position: relative;
         height: 200px;
-        background-image: url("/images/index/coding_background.jpg");
-        background-color: #212121;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
     }
 
     #typed {
-        position: absolute;
         margin-top: 75px;
         margin-left: 30px;
-        color: white;
         font-size: 35px;
-        font-weight: bold;
-        z-index: 1;
     }
 
     #scene {
@@ -203,8 +193,6 @@ body {
     }
 
     #projects-text {
-        position: absolute;
-        margin-top: 100px;
         margin-left: 30px;
         margin-right: 30px;
     }
