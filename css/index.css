@@ -165,6 +165,14 @@ body {
 /* for responsive website */
 @media screen and (max-width: 1000px) {
 
+    #profile-box h1 {
+        font-size: 50px;
+    }
+
+    #profile-box p {
+        font-size: 30px;
+    }
+
     #technologies {
         position: relative;
         height: 300px;
