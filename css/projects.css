@@ -67,3 +67,16 @@ body {
 #footer .fa:hover {
     opacity: 0.7;
 }
+
+/* for responsive website */
+@media screen and (max-width: 1000px) {
+
+    .list-item img {
+        display: none;
+    }
+
+    .list-item div {
+        margin: 0px;
+    }
+
+}
