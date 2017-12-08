@@ -163,7 +163,7 @@ body {
 }
 
 /* for responsive website */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1000px) {
 
     #technologies {
         position: relative;
