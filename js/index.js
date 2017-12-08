@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $("#nav-about-me").on("click", function(event) {
         event.preventDefault();
         var anchor = $(this);
@@ -6,4 +7,9 @@ $(document).ready(function() {
             scrollTop: $(anchor.attr("href")).offset().top
         }, 1500);
     });
+
+    $("#collapseNavbar ul li").on("click", function() {
+        $("#collapseNavbar").collapse("hide");
+    });
+
 });

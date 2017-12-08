@@ -79,6 +79,7 @@ body {
     color: white;
     font-size: 50px;
     font-weight: bold;
+    z-index: 1;
 }
 
 #scene {
@@ -112,7 +113,7 @@ body {
 
 #projects {
     position: relative;
-    height: 330px;
+    height: 300px;
     color: white;
 }
 
@@ -135,6 +136,7 @@ body {
 }
 
 #about-me {
+    padding-top: 40px;
     margin-bottom: 30px;
     color: white;
     font-size: 20px;
@@ -183,6 +185,7 @@ body {
         color: white;
         font-size: 50px;
         font-weight: bold;
+        z-index: 1;
     }
 
     #scene {
