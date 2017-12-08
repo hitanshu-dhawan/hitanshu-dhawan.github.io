@@ -166,11 +166,11 @@ body {
 @media screen and (max-width: 1000px) {
 
     #profile-box h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     #profile-box p {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     #technologies {
@@ -187,9 +187,9 @@ body {
     #typed {
         position: absolute;
         margin-top: 120px;
-        margin-left: 50px;
+        margin-left: 30px;
         color: white;
-        font-size: 50px;
+        font-size: 40px;
         font-weight: bold;
         z-index: 1;
     }
