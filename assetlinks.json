@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.hitanshudhawan.applinks",
+    "sha256_cert_fingerprints":
+    ["61:44:31:2A:22:BD:16:7B:48:72:DA:F1:B1:07:F4:DE:36:40:3F:35:C5:5C:08:7A:D4:08:CE:D0:4B:6B:46:5E"]
+  }
+}]
