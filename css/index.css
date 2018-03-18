@@ -135,15 +135,28 @@ body {
 }
 
 #about-me {
+    position: relative;
     padding-top: 40px;
-    margin-bottom: 30px;
     color: white;
     font-size: 20px;
-    text-align: left;
 }
 
 #about-me h1 {
     font-size: 40px;
+}
+
+#about-me-text {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 60%;
+}
+
+#dialogflow {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    width: 30%;
+    height: 450px;
 }
 
 #footer {
@@ -195,6 +208,14 @@ body {
     #projects-text {
         margin-left: 30px;
         margin-right: 30px;
+    }
+
+    #about-me-text {
+        width: auto;
+    }
+
+    #dialogflow {
+        display: none;
     }
 
 }
