@@ -1,70 +1,229 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hitanshu Dhawan - Portfolio Website
 
-## Available Scripts
+A modern, professional portfolio website for **Hitanshu Dhawan**, Senior Android Engineer at PhonePe. This is a fully static website built with React and designed to showcase Android development expertise, projects, and professional experience.
 
-In the project directory, you can run:
+## 🌟 Features
 
-### `npm start`
+- **7 Complete Pages**: Home, About, Projects, Portfolio, Blog, Open Source, Contact
+- **Fully Responsive**: Mobile-first design that works on all devices
+- **Professional Design**: Clean, modern aesthetic with developer-focused branding
+- **Static Site**: No backend required - perfect for GitHub Pages deployment
+- **SEO Optimized**: Semantic HTML and optimized for search engines
+- **Fast Loading**: Optimized images and efficient code structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🏗️ Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+├── public/                 # Static assets
+│   ├── index.html
+│   ├── favicon.ico
+│   └── manifest.json
+├── src/                    # Source code
+│   ├── components/         # Reusable components
+│   │   ├── ui/            # UI components (buttons, cards, etc.)
+│   │   ├── Navbar.jsx     # Navigation component
+│   │   └── Footer.jsx     # Footer component
+│   ├── pages/             # Page components
+│   │   ├── Home.jsx       # Landing page
+│   │   ├── About.jsx      # About page
+│   │   ├── Projects.jsx   # Projects showcase
+│   │   ├── Portfolio.jsx  # Other work
+│   │   ├── Blog.jsx       # Blog listings
+│   │   ├── BlogPost.jsx   # Individual blog posts
+│   │   ├── OpenSource.jsx # Open source contributions
+│   │   └── Contact.jsx    # Contact page
+│   ├── mock/              # Static data
+│   │   └── data.js        # All website content
+│   ├── hooks/             # Custom React hooks
+│   ├── App.js             # Main app component
+│   ├── index.js           # Entry point
+│   └── index.css          # Global styles
+├── tailwind.config.js     # Tailwind CSS configuration
+├── craco.config.js        # CRACO configuration
+├── package.json           # Dependencies and scripts
+└── Dockerfile             # Docker configuration
+```
 
-### `npm test`
+## 🚀 Quick Start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- **Node.js** (version 18 or higher)
+- **Yarn** (recommended) or npm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Local Development
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone and setup:**
+   ```bash
+   git clone <repository-url>
+   cd hitanshu-dhawan-portfolio
+   yarn install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Start development server:**
+   ```bash
+   yarn start
+   ```
+   
+   Open [http://localhost:3000](http://localhost:3000) to view in browser.
 
-### `npm run eject`
+3. **Build for production:**
+   ```bash
+   yarn build
+   ```
+   
+   Creates optimized build in `build/` directory.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Using Docker
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Build Docker image:**
+   ```bash
+   docker build -t hitanshu-portfolio .
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Run container:**
+   ```bash
+   docker run -p 3000:3000 hitanshu-portfolio
+   ```
+   
+   Access at [http://localhost:3000](http://localhost:3000)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📦 Available Scripts
 
-## Learn More
+- `yarn start` - Start development server
+- `yarn build` - Build for production
+- `yarn test` - Run tests
+- `yarn serve` - Serve production build locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🌐 GitHub Pages Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This site is optimized for GitHub Pages deployment:
 
-### Code Splitting
+1. **Build the site:**
+   ```bash
+   yarn build
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Deploy to GitHub Pages:**
+   - Push your code to a GitHub repository
+   - Go to repository Settings > Pages
+   - Select "Deploy from a branch"
+   - Choose "main" branch and "/build" folder
+   - Or use GitHub Actions for automated deployment
 
-### Analyzing the Bundle Size
+### GitHub Actions Deployment (Recommended)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Create `.github/workflows/deploy.yml`:
 
-### Making a Progressive Web App
+```yaml
+name: Deploy to GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+on:
+  push:
+    branches: [ main ]
 
-### Advanced Configuration
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+        cache: 'yarn'
+    
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+    
+    - name: Build
+      run: yarn build
+    
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🎨 Customization
 
-### Deployment
+### Updating Content
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+All website content is stored in `src/mock/data.js`. Update the following sections:
 
-### `npm run build` fails to minify
+- **personalInfo**: Basic information and contact details
+- **experience**: Work experience and achievements  
+- **projects**: Portfolio projects with descriptions
+- **blogPosts**: Blog articles and technical posts
+- **skills**: Technical skills and expertise areas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Styling
+
+The site uses **Tailwind CSS** for styling:
+
+- Global styles: `src/index.css`
+- Component styles: Inline Tailwind classes
+- Custom components: `src/components/ui/`
+
+### Adding New Pages
+
+1. Create new component in `src/pages/`
+2. Add route in `src/App.js`
+3. Update navigation in `src/components/Navbar.jsx`
+
+## 🧪 Technologies Used
+
+- **React 19** - Frontend framework
+- **React Router** - Client-side routing
+- **Tailwind CSS** - Styling framework
+- **Shadcn/ui** - UI component library
+- **Lucide React** - Icon library
+- **CRACO** - Create React App Configuration Override
+
+## 📱 Responsive Design
+
+The website is fully responsive with breakpoints:
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px  
+- **Desktop**: > 1024px
+
+## ⚡ Performance
+
+- **Optimized Images**: All images are properly sized and compressed
+- **Code Splitting**: React lazy loading for optimal bundle size
+- **SEO Ready**: Meta tags, semantic HTML, and proper heading structure
+- **Fast Loading**: Minimal JavaScript and efficient CSS
+
+## 🔧 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📞 Contact
+
+**Hitanshu Dhawan**
+- Email: hitanshudhawan1996@gmail.com
+- LinkedIn: [linkedin.com/in/hitanshu-dhawan](https://linkedin.com/in/hitanshu-dhawan)
+- GitHub: [github.com/hitanshu-dhawan](https://github.com/hitanshu-dhawan)
+
+---
+
+Built with ❤️ by Hitanshu Dhawan | © 2025 All Rights Reserved
