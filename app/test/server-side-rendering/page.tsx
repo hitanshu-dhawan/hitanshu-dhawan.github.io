@@ -1,19 +1,12 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 interface GitHubRepo {
     id: number
     name: string
-    description: string | null
-    html_url: string
-    language: string | null
-    stargazers_count: number
-    forks_count: number
-    updated_at: string
 }
 
 async function getRepos(): Promise<GitHubRepo[]> {
-    const response = await fetch('https://api.github.com/users/hitanshu-dhawan/repos?sort=updated&per_page=20', {
+    const response = await fetch('https://api.github.com/users/hitanshu-dhawan/repos?sort=updated&per_page=100', {
         // Disable caching to ensure fresh data on each request
         cache: 'no-store'
     })
@@ -32,7 +25,7 @@ export default async function ServerSideRenderingPage() {
     try {
         repos = await getRepos()
     } catch (err) {
-        error = err instanceof Error ? err.message : 'An error occurred'
+        error = err instanceof Error ? err.message : 'Something went wrong'
     }
 
     if (error) {
@@ -45,43 +38,21 @@ export default async function ServerSideRenderingPage() {
 
     return (
         <div className="container mx-auto px-4 py-8">
+
             <div className="mb-8">
                 <h1 className="text-3xl font-bold mb-2">GitHub Repositories</h1>
                 <p className="text-muted-foreground">Server-Side Rendering (SSR) - Data fetched on server for each request</p>
                 <Badge variant="outline" className="mt-2">SSR</Badge>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="space-y-2">
                 {repos.map((repo) => (
-                    <Card key={repo.id} className="h-full">
-                        <CardHeader>
-                            <CardTitle className="text-lg">
-                                <a
-                                    href={repo.html_url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="hover:text-blue-600 transition-colors"
-                                >
-                                    {repo.name}
-                                </a>
-                            </CardTitle>
-                            <CardDescription>{repo.description || "No description available"}</CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="flex flex-wrap gap-2 mb-3">
-                                {repo.language && (
-                                    <Badge variant="secondary">{repo.language}</Badge>
-                                )}
-                                <Badge variant="outline">⭐ {repo.stargazers_count}</Badge>
-                                <Badge variant="outline">🍴 {repo.forks_count}</Badge>
-                            </div>
-                            <p className="text-sm text-muted-foreground">
-                                Updated: {new Date(repo.updated_at).toLocaleDateString()}
-                            </p>
-                        </CardContent>
-                    </Card>
+                    <div key={repo.id} className="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
+                        {repo.name}
+                    </div>
                 ))}
             </div>
+
         </div>
     )
 }
